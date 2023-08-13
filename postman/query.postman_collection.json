@@ -1,0 +1,134 @@
+{
+	"info": {
+		"_postman_id": "32f8b504-c8a0-4a26-85e5-574c038ae84e",
+		"name": "PhD Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6143686"
+	},
+	"item": [
+		{
+			"name": "[LOCAL] human generated",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"text\": \"text input with some sample message\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/predict",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"predict"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[LAMBDA] human generated",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"text\": \"text input with some sample message\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://tls6grkoj4ltb37gbyjmdo3nsy0lamax.lambda-url.ap-southeast-2.on.aws/predict",
+					"protocol": "https",
+					"host": [
+						"tls6grkoj4ltb37gbyjmdo3nsy0lamax",
+						"lambda-url",
+						"ap-southeast-2",
+						"on",
+						"aws"
+					],
+					"path": [
+						"predict"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[REALTIME SAGEMAKER] human generated",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"text\": \"text input some\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://oxg7c6pr4ckfjoswnkulbah3g40tdzbg.lambda-url.ap-southeast-2.on.aws/",
+					"protocol": "https",
+					"host": [
+						"oxg7c6pr4ckfjoswnkulbah3g40tdzbg",
+						"lambda-url",
+						"ap-southeast-2",
+						"on",
+						"aws"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[LAMBDA] machine generated",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"text\": \"input with computer\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://tls6grkoj4ltb37gbyjmdo3nsy0lamax.lambda-url.ap-southeast-2.on.aws/predict",
+					"protocol": "https",
+					"host": [
+						"tls6grkoj4ltb37gbyjmdo3nsy0lamax",
+						"lambda-url",
+						"ap-southeast-2",
+						"on",
+						"aws"
+					],
+					"path": [
+						"predict"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
