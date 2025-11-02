@@ -1,0 +1,13 @@
+# Deployment dependencies
+-r requirements.txt
+
+# AWS SageMaker
+sagemaker>=2.0.0
+boto3>=1.26.0
+
+# Serverless
+serverless-wsgi==3.0.2
+
+# Terraform (install separately via system package manager)
+# terraform>=1.0.0
+

@@ -5,8 +5,8 @@ import os
 import torch
 from transformers import RobertaTokenizer
 
-from model import ROBERTAClassifier
-from utils import load_checkpoint
+from gpt_detector.model import ROBERTAClassifier
+from gpt_detector.utils import load_checkpoint
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)

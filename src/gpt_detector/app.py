@@ -6,8 +6,8 @@ import torch
 from flask import Flask, jsonify, render_template, request, url_for
 from transformers import RobertaTokenizer
 
-from model import ROBERTAClassifier
-from utils import load_checkpoint, parse_arge
+from gpt_detector.model import ROBERTAClassifier
+from gpt_detector.utils import load_checkpoint, parse_args
 
 app = Flask(__name__)
 
@@ -47,7 +47,7 @@ def health():
 def predict():
     input_text = request.form["text"]
 
-    args = parse_arge()
+    args = parse_args()
     tokenizer = RobertaTokenizer.from_pretrained(args.saved_model_dir)
     out = tokenizer(input_text, padding="max_length", truncation=True)
 
@@ -83,7 +83,7 @@ def predict_json():
         input_json = request.get_json()
         input_text = str(input_json["text"])
 
-        args = parse_arge()
+        args = parse_args()
         tokenizer = RobertaTokenizer.from_pretrained(args.saved_model_dir)
         out = tokenizer(input_text, padding="max_length", truncation=True)
 

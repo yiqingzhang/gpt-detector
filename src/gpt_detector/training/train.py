@@ -9,9 +9,9 @@ from torch.utils.data import DataLoader
 from tqdm import tqdm
 from transformers import get_linear_schedule_with_warmup, set_seed
 
-from data_process import run_data_preprocess
-from model import ROBERTAClassifier
-from utils import parse_arge, save_checkpoint, save_metrics
+from gpt_detector.data_process import run_data_preprocess
+from gpt_detector.model import ROBERTAClassifier
+from gpt_detector.utils import parse_args, save_checkpoint, save_metrics
 
 IS_SAGEMAKER = True
 
@@ -187,7 +187,7 @@ def validation(model, device, dataloader_val, criterion):
 
 if __name__ == "__main__":
     # load the args
-    args = parse_arge()
+    args = parse_args()
 
     if IS_SAGEMAKER:
         print(

@@ -3,8 +3,8 @@ import os
 import torch
 from transformers import RobertaTokenizer
 
-from model import ROBERTAClassifier
-from utils import load_checkpoint, parse_arge
+from gpt_detector.model import ROBERTAClassifier
+from gpt_detector.utils import load_checkpoint, parse_args
 
 
 def evaluate(model, device, data, mask):
@@ -20,7 +20,7 @@ def evaluate(model, device, data, mask):
     return pred_label.item()
 
 
-args = parse_arge()
+args = parse_args()
 
 input_text = "this is a machine-generated text"
 tokenizer = RobertaTokenizer.from_pretrained(args.saved_model_dir)
